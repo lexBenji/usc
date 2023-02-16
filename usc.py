@@ -10,33 +10,50 @@ drs=[
 'down'
 ]
 dr = None
+Str = ''
 
 rf = open(argv[1]).readlines()
-board = [list(x) for x in rf]
+br = [list(x) for x in rf]
 
 while True:
-    if board[y][x] == '>':
+    if br[y][x] == '>':
         dr = 'left'
-    elif board[y][x] == '<':
+    elif br[y][x] == '<':
         dr = 'right'
-    elif board[y][x] == 'v':
+    elif br[y][x] == 'v':
         dr = 'down'
-    elif board[y][x] == '^':
+    elif br[y][x] == '^':
         dr = 'up'
-    elif board[y][x] == 'p':
-        print(board[y+1][x],end='')
-    elif board[y][x] == 'P':
-        print(board[y-1][x],end='')
-    elif board[y][x] == 'n':
-        print()
-    elif board[y][x] == '#':
-        exit()
+    elif br[y][x] == 'O':
+        dr = random.choice(drs)
+    elif br[y][x] == 'p':
+        Str += br[y+1][x]
+    elif br[y][x] == 'P':
+        Str += br[y-1][x]
+    elif br[y][x] == 'n':
+        Str += '\n'
+    elif br[y][x] == '#':
+        break
 
     if dr == 'left':
-        x = x + 1
+        if x + 1 < 0:
+            dr = None
+        else:
+            x = (x + 1) % len(br[y])
     elif dr == 'right':
-        x = x - 1
+        if x - 1 < 0:
+            dr = None
+        else:
+            x = (x - 1) % len(br[y])
     elif dr == 'up':
-        y = y - 1
+        if y - 1 < 0:
+            dr = None
+        else:
+            y = (y - 1) % len(br)
     elif dr == 'down':
-        y = y + 1
+        if y + 1 < 0:
+            dr = None
+        else:
+            y = (y + 1) % len(br)
+    
+print(Str,end='')
