@@ -1,5 +1,4 @@
 board=[
-'vhello world   #        <',
-'>PPPPPPPPPPPn  vfuck me  ',
-'               >PPPPPPPn^'
+'vhello world',
+'>PPPPPPPPPPPn#' 
 ]
