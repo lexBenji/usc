@@ -17,9 +17,11 @@ v            #
  hello world
 ```
 
-`^v<>` is for moving the point.<br>
+`#` marks the end of the code.<br>
+`^`, `v`, `<`, `>` is for moving the point.<br>
 `p` prints texts below it.<br>
 `P` prints texts above it.<br>
-`n` prints a newline.
+`rR` sets a random direction.<br>
+`nN` prints a newline.
 
-NOTE: The Code Is In The \`board.py' File.
+NOTE: The Code Is In The **`board.py`** File.

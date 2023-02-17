@@ -1,4 +1,6 @@
 board=[
-'vhello world',
-'>PPPPPPPPPPPn#' 
+'vhello world  v',
+'>PPPPPPPPPPPn>r#',
+'   thgir gniogv ',
+' #nPPPPPPPPPPP<'
 ]
