@@ -2,14 +2,14 @@
 
 from sys import argv
 import random
+from board import board
 
 y=0
 x=0
 Str = ''
 dr = None
 
-rf = open(argv[1]).readlines()
-br = [list(x) for x in rf]
+br = [list(x) for x in board]
 
 while True:
     if br[y][x] == '>':

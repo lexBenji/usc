@@ -1,2 +1,2 @@
 start:
-	clear;python3 usc.py *.usc
+	clear;python3 usc.py
