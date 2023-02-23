@@ -18,6 +18,9 @@ dr = None
 br = [list(x) for x in board]
 
 while True:
+    print('\033c',end='')
+    print(y,x)
+    print(br[y][x])
     if br[y][x] == '>':
         dr = 'l'
     elif br[y][x] == '<':

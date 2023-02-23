@@ -1,6 +1,6 @@
 board=[
-'vhello world  v',
-'>PPPPPPPPPPPn>r#',
-'   thgir gniogv ',
+'vhello world  >pppppppppppppppn v',
+'>PPPPPPPPPPPn>R# is for ending   ',
+'   thgir gniogv^                <',
 ' #nPPPPPPPPPPP<'
 ]
