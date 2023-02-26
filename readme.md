@@ -14,18 +14,13 @@ then type `cd usc` if you're not on Windows or `dir usc` if you're on Windows.
 
 # Code
 
-\`Hello World' in USC
+Example Code:
 ```
-v            #
->pppppppppppn^
- hello world
+>v#
+  ^
+ >^
 ```
 
-`#` marks the end of the code.<br>
-`^`, `v`, `<`, `>` is for moving the point.<br>
-`p` prints texts below it.<br>
-`P` prints texts above it.<br>
-`rR` sets a random direction.<br>
-`nN` prints a newline.
+This code makes the value of cell number 2 2
 
 NOTE: The Code Is In The **`board.py`** File.
