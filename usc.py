@@ -6,7 +6,6 @@ from board import board
 
 y=0
 x=0
-Str = ''
 drs = [
         'l',
         'h',
@@ -14,29 +13,26 @@ drs = [
         'k'
         ]
 dr = None
+cell = [0,0,0,0,0,0,0,0]
+i = 0
 
 br = [list(x) for x in board]
 
 while True:
-    print('\033c',end='')
-    print(y,x)
-    print(br[y][x])
+    if cell[i] < 0:
+        cell[i] = 0
     if br[y][x] == '>':
+        i = i + 1
         dr = 'l'
     elif br[y][x] == '<':
+        i = i - 1
         dr = 'h'
     elif br[y][x] == 'v':
+        cell[i] = cell[i] - 1
         dr = 'j'
     elif br[y][x] == '^':
+        cell[i] = cell[i] + 1
         dr = 'k'
-    elif br[y][x].lower() == 'r':
-        dr = random.choice(drs)
-    elif br[y][x] == 'p':
-        Str += br[y+1][x]
-    elif br[y][x] == 'P':
-        Str += br[y-1][x]
-    elif br[y][x].lower() == 'n':
-        Str += '\n'
     elif br[y][x] == '#':
         break
 
@@ -49,4 +45,8 @@ while True:
     elif dr == 'k':
         y = (y - 1) % len(br)
     
-print(Str,end='')
+for c in cell:
+    if c == 0:
+        pass
+    else:
+        print(f'{c}: {cell[c]}')
