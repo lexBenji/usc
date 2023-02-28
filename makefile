@@ -1,2 +1,2 @@
 start:
-	clear;python3 usc.py
+	clear;python3 usc.py hello.usc
