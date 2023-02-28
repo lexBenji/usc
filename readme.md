@@ -22,5 +22,3 @@ Example Code:
 ```
 
 This code makes the value of cell number 2 2
-
-NOTE: The Code Is In The **`board.py`** File.
